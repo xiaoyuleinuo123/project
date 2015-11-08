@@ -93,3 +93,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 TEMPLATE_DIRS = ('./books/',)
+add sth here

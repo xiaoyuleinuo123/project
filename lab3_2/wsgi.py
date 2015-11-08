@@ -16,3 +16,4 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "lab3_2.settings")
 
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
+add sth here
