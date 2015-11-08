@@ -1,0 +1,29 @@
+{% load static %}
+<link rel="stylesheet" href="{% static '1.css'%}">
+<!DOCTYPE html>
+<html>
+<head>
+	<title> add the author </title>
+</head>
+<body>
+<div id="formbackground" style="position:absolute; width:100%; height:100%; z-index:-1">  
+<img src="http://bizhi.33lc.com/uploadfile/2013/1011/20131011090515395.jpg" height="100%" width="100%"/>  
+</div>
+	<form method="post">
+		<div align="center"><h1>add the author</h1></div>
+		<table border="1" align="center">
+			<tr>
+			<th>AuthorID</th><th>Name</th><th>Age</th><th>Country</th>
+			</tr>
+				<td><input name="AuthorID" type="text" value={{author.AuthorID}}></td>			
+				<td><input name="Name" type="text" value={{author.Name}}></td>
+				<td><input name="Age" type="text" value={{author.Age}}></td>
+				<td><input name="Country" type="text" value={{author.Country}}></td>
+				<td><input  type="submit" value="save"><input type="reset" value="clear"></td> 				
+			</tr>
+		</table>
+	</form>
+
+</body>
+
+</html>

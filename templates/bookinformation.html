@@ -1,0 +1,59 @@
+{% load static %}
+<link rel="stylesheet" href="{% static '1.css'%}">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>searchbook</title>
+</head>
+<body>
+<div id="formbackground" style="position:absolute; width:100%; height:100%; z-index:-1">  
+<img src="http://img3.imgtn.bdimg.com/it/u=4261838641,1333804182&fm=21&gp=0.jpg" height="100%" width="100%"/>  
+</div>
+	<div align="center"><h1>search</h1></div>
+		<table border="1" align="center">
+		<tr>
+			<th>ISBN</th>
+			<th>Title</th>
+			<th>AuthorID</th>
+			<th>Publisher</th>
+			<th>PublishDate</th>
+			<th>Price</th>
+		</tr>
+            {% for book in book %}
+			<tr>
+				<td>{{ book.ISBN }}</td>
+				<td>{{ book.Title }}</td>
+				<td>{{ book.AuthorID }}</td>
+				<td>{{ book.Publisher }}</td>
+				<td>{{ book.PublishDate }}</td>
+				<td>{{ book.Price }}</td>
+				<td><input type="button" value="delete" onclick="location.href='/deletebook/?title={{book.Title}}'"></td>			
+				<td><input type="button" value="update" onclick="location.href='/updatebook/?title={{book.Title}}'"></td>	
+						
+		{% endfor %}      
+ 
+			</tr>
+
+	</table>
+			<table border="1" align="center">
+		<tr>
+			<th>AuthorID</th>
+			<th>Name</th>
+			<th>Age</th>
+			<th>Country</th>
+		</tr>
+            {% for author in author %}
+			<tr>
+				<td>{{ author.AuthorID }}</td>
+				<td>{{ author.Name }}</td>
+				<td>{{ author.Age }}</td>
+				<td>{{ author.Country }}</td>
+				
+		{% endfor %}      
+ 
+			</tr>
+
+	</table>
+		<div align="center"><a href="/home/">back</a></div>
+</body>
+</html>

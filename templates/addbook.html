@@ -1,0 +1,32 @@
+{% load static %}
+<link rel="stylesheet" href="{% static '1.css'%}">
+<!DOCTYPE html>
+<html>
+<head>
+	<title> add the book </title>
+</head>
+<body>
+<div id="formbackground" style="position:absolute; width:100%; height:100%; z-index:-1">  
+<img src="http://bizhi.33lc.com/uploadfile/2013/1011/20131011090515395.jpg" height="100%" width="100%"/>  
+</div>
+	<form method="post">
+
+		<div align="center"><h1>add the book</h1></div>
+		<table border="1" align="center">
+			<tr>
+			<th>ISBN</th><th>Title</th><th>AuthorID</th><th>Publisher</th><th>PublishDate</th><th>Price</th>
+			</tr>
+				<td><input name="ISBN" type="text" value={{book.ISBN}}></td>
+				<td><input name="Title" type="text" value={{book.Title}}></td>
+				<td><input name="AuthorID" type="text" value={{book.AuthorID}}></td>
+				<td><input name="Publisher" type="text" value={{book.Publisher}}></td>
+				<td><input name="PublishDate" type="text" value={{book.PublishDate}}></td>
+				<td><input name="Price" type="text" value={{book.Price}}></td>
+ 				<td><input  type="submit" value="save"></td> 
+			</tr>
+		</table>
+	</form>
+
+</body>
+
+</html>

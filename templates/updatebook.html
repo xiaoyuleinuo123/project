@@ -1,0 +1,31 @@
+
+<html>
+<head>
+	<title>updatebook</title>
+	<link href="/t/static/css/bootstrap.min.css", rel="stylesheet"/>
+</head>
+<body>
+<div id="formbackground" style="position:absolute; width:100%; height:100%; z-index:-1">  
+<img src="http://p1.qqhot.com/G1/M00/8A/4E/rBACE1OP6J2j3xIiAAH98kowP-I031.jpg" height="100%" width="100%"/>  
+</div>
+	<form method="post">
+		<div align="center"><h1>updatebook</h1></div>
+          
+		<table border="1" align="center">
+			<tr>
+			<th>ISBN</th><th>AuthorID</th><th>Publisher</th><th>PublishDate</th><th>Price</th>
+			</tr>
+
+				<td><input name="ISBN" type="text" value={{book.ISBN}}></td>
+				<td><input name="AuthorID" type="text" value={{book.AuthorID}}></td>
+				<td><input name="Publisher" type="text" value={{book.Publisher}}></td>
+				<td><input name="PublishDate" type="text" value={{book.PublishDate}}></td>
+				<td><input name="Price" type="text" value={{book.Price}}></td>				
+				<td><input  type="submit" value="save"><input type="reset" value="clear"></td>
+			</tr>
+			<div align="center"><a href="/home/">back</a></div>
+		</table>
+	</form>
+</body>
+
+</html>
